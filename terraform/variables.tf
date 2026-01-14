@@ -15,3 +15,8 @@ variable "public_subnet_cidr" {
   type        = list(string)
   default     = ["10.0.1.0/24", "10.0.2.0/24"]
 }
+
+variable "eks_cluster_role_arn" {
+  description = "Pre-existing IAM role ARN for EKS control plane"
+  type        = string
+}
