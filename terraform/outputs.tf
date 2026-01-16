@@ -21,3 +21,8 @@ output "eks_cluster_endpoint" {
 output "eks_node_group_name" {
  value = aws_eks_node_group.this.node_group_name
 }
+
+output "github_actions_role_arn" {
+ description = "IAM Role ARN for GitHub Actions OIDC"
+ value       = aws_iam_role.github_actions.arn
+}
