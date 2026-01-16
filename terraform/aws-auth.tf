@@ -9,19 +9,25 @@ resource "kubernetes_config_map_v1" "aws_auth" {
       {
         rolearn  = aws_iam_role.eks_nodes.arn
         username = "system:node:{{EC2PrivateDNSName}}"
-        groups = [
+        groups   = [
           "system:bootstrappers",
           "system:nodes"
         ]
       }
-  ])
+    ])
 
-  mapUseers = yamlencode([
-    {
-      userarn  = data.aws_caller_identity.current.arn
-      username = "admin"
-      groups   = ["system:masters"]
-    }
-  ])
- }
-}  
+    mapUsers = yamlencode([
+      {
+        userarn  = aws_iam_role.github_actions.arn
+        username = "github-actions"
+        groups   = ["system:masters"]
+      },
+      {
+        userarn  = data.aws_caller_identity.current.arn
+        username = "admin"
+        groups   = ["system:masters"]
+      }
+    ])
+  }
+}
+
