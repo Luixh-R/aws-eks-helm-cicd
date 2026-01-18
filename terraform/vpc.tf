@@ -27,11 +27,10 @@ resource "aws_subnet" "public" {
   tags = {
     Name = "eks-public-${count.index}"
 
+    "kubernetes.io/role/elb" = "1"
     "kubernetes.io/cluster/eks-helm-cluster" = "shared"
-    "kubernetes.io/role/elb"                 = "1"
   }
 }
-
 
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.this.id
