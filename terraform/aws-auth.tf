@@ -1,8 +1,12 @@
-resource "kubernetes_config_map_v1" "aws_auth" {
+resource "kubernetes_config_map_v1_data" "aws_auth" {
+  depends_on = [aws_eks_node_group.this]
+
   metadata {
     name      = "aws-auth"
     namespace = "kube-system"
   }
+  
+  force = true
 
   data = {
     mapRoles = yamlencode([
