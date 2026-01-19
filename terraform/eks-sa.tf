@@ -1,4 +1,4 @@
-resource "kubernetes_service_account" "cluster_autoscaler" {
+resource "kubernetes_service_account_v1" "cluster_autoscaler" {
   metadata {
     name      = "cluster-autoscaler"
     namespace = "kube-system"
