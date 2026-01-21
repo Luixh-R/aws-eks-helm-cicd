@@ -37,7 +37,7 @@ The setup follows AWS and Kubernetes best practices, including **IRSA (IAM Roles
 ├── helm-monitoring.tf              # Prometheus & Grafana (Helm)
 ├── k8s-hpa.tf                      # Horizontal Pod Autoscaler
 ├── outputs.tf                      # Terraform outputs
-├── providers.tf                   # AWS, Kubernetes, Helm providers
+├── providers.tf                    # AWS, Kubernetes, Helm providers
 ├── README.md
 ```
 
