@@ -197,5 +197,5 @@ terraform destroy
 
 ## Author
 
-Provisioned and managed using Terraform, Kubernetes, and AWS best practices.
+Provisioned and managed using Terraform, Kubernetes, Helm and AWS best practices.
 
