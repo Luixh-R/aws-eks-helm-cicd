@@ -71,7 +71,7 @@ terraform apply
 
 This will:
 
-* Create the VPC and networking
+* Create the AWSVPC and networking
 * Provision the EKS cluster and node groups
 * Configure IAM roles and IRSA
 * Deploy controllers and monitoring via Helm
