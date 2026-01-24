@@ -1,4 +1,4 @@
-# EKS Terraform Helm Autoscaling Project
+# AWS EKS Terraform Helm Autoscaling Project
 
 This project provisions a production-ready **AWS EKS cluster** using **Terraform**, deploys workloads using **Helm**, and enables **end-to-end autoscaling and observability** with:
 
